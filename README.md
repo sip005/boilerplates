@@ -5,3 +5,10 @@
 
 `docker run --name owsap --rm -p 3000:3000 --network monitoring-network -v /root/owsap:/var bkimminich/juice-shop`
 `docker run -d    --name prometheus02    -p 9090:9090    -v /root/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml    --network monitoring-network    --restart unless-stopped    prom/prometheus    --config.file=/etc/prometheus/prometheus.yml`
+
+`docker run -d \
+  --name grafana \
+  -p 3001:3000 \
+  --net monitoring-network \
+  grafana/grafana
+`
