@@ -19,3 +19,13 @@
 - docker compose for postgres along with visual tool, prosma
 - mongodb versioning conflict
 - 
+
+```bash
+docker run --name mariadb-container -e MYSQL_ROOT_PASSWORD=1234 -v /root/php/fifty/mariadb_vol:/var/lib/mysql -d mariadb:latest
+```
+
+- `docker run` - Command to run a Docker container.
+- `--name mariadb-container` - Specifies the name for the container as `mariadb-container`.
+- `-e MYSQL_ROOT_PASSWORD=1234` - Sets the root password for the MariaDB instance to `1234`.
+- `-v /root/php/fifty/mariadb_vol:/var/lib/mysql` - Mounts the volume located at `/root/php/fifty/mariadb_vol` on the host to `/var/lib/mysql` within the container. This volume will persist MariaDB's data files even if the container is stopped or removed.
+- `-d mariadb:latest` - Specifies to run the latest version of the MariaDB Docker image in detached mode (`-d`).
