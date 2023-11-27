@@ -12,3 +12,10 @@
   --net monitoring-network \
   grafana/grafana
 `
+- **Update**
+
+- postgres
+- mysql
+- docker compose for postgres along with visual tool, prosma
+- mongodb versioning conflict
+- 
